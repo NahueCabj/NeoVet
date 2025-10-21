@@ -1,9 +1,29 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "../assets/logo1.png";
+import logo from "../assets/logo3.png";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const shouldBeScrolled = scrollY > 20;
+      console.log('Scroll Y:', scrollY, 'isScrolled:', shouldBeScrolled);
+      setIsScrolled(shouldBeScrolled);
+    };
+
+    // Ejecutar inmediatamente
+    handleScroll();
+    
+    // Listener simple
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const links = [
     { name: "Inicio", href: "#home" },
@@ -13,7 +33,11 @@ export default function NavBar() {
   ];
 
   return (
-    <nav className="fixed w-full top-0 left-0 z-50 bg-brand-violet shadow-md">
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-brand-violet shadow-lg' 
+        : 'bg-transparent'
+    }`}>
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
         <div className="flex items-center gap-2">

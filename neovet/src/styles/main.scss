@@ -1,0 +1,87 @@
+.hero__content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+  .banner {
+    display: flex;
+    flex-direction: column; // mobile first
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+
+    .banner__logo {
+      img {
+        max-height: 150px;
+        width: auto;
+      }
+    }
+
+    .banner__divider {
+      display: none; // no aparece en mobile
+      width: 2px;
+      background-color: rgba(255, 255, 255, 0.5);
+      margin: 0 2rem;
+    }
+
+    .banner__text {
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  .hero__subtitle {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin: 2rem 0;
+  }
+
+  .hero__cta {
+    display: inline-block;
+    background-color: #14b8a6; // teal-700
+    color: white;
+    font-weight: bold;
+    font-size: 1.125rem; // text-lg
+    padding: 1rem 2.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+
+    &:hover {
+      background-color: #0d9488; // teal-600
+      transform: scale(1.05);
+    }
+  }
+
+  // Desktop
+  @media (min-width: 768px) {
+    .banner {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      .banner__logo img {
+        max-height: 40rem; // agranda logo en desktop
+      }
+
+      .banner__divider {
+        display: block; // ahora aparece la barra vertical
+      }
+
+      .banner__text h1 {
+        font-size: 4rem;
+      }
+    }
+
+    .hero__subtitle {
+      font-size: 1.75rem;
+    }
+  }
+}

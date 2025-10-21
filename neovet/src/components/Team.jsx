@@ -3,7 +3,7 @@ import siteContent from "../data/siteContent";
 
 export default function Team() {
   return (
-    <section id="team" className="min-h-screen py-20 bg-gray-50 text-center">
+    <section id="team" className="min-h-screen py-20 bg-gray-50 text-center pt-32">
       <h2 className="text-4xl font-bold mb-12">Equipo</h2>
       <div className="flex flex-wrap justify-center gap-8">
         {siteContent.team.map((member) => (
