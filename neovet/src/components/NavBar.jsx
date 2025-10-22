@@ -10,7 +10,6 @@ export default function NavBar() {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const shouldBeScrolled = scrollY > 20;
-      console.log('Scroll Y:', scrollY, 'isScrolled:', shouldBeScrolled);
       setIsScrolled(shouldBeScrolled);
     };
 
@@ -61,7 +60,8 @@ export default function NavBar() {
         {/* Botón CTA Desktop */}
         <a
           href="#contact"
-          className="hidden md:inline-block bg-brand-green text-white px-5 py-2 rounded-lg font-semibold hover:bg-brand-lightblue transition-colors"
+          className="hidden md:inline-block text-white px-5 py-2 rounded-lg font-semibold hover:bg-[#C8D9F3] hover:text-[#134053] transition-all duration-300"
+          style={{ backgroundColor: '#51B4A2' }}
         >
           Agendar consulta
         </a>
@@ -94,7 +94,8 @@ export default function NavBar() {
           ))}
           <a
             href="#contact"
-            className="block bg-brand-green text-white px-6 py-3 rounded-lg font-semibold mt-4"
+            className="block text-white px-6 py-3 rounded-lg font-semibold mt-4 hover:bg-[#C8D9F3] hover:text-[#134053] transition-all duration-300"
+            style={{ backgroundColor: '#06F1A2' }}
             onClick={() => setIsOpen(false)}
           >
             Agendar consulta

@@ -22,14 +22,14 @@ const siteContent = {
     image: "https://images.pexels.com/photos/7469229/pexels-photo-7469229.jpeg"
   },
   services: [
-    { id: "diag", title: "Diagnóstico", desc: "Imágenes, tumores y biopsias.", icon: "/assets/icons/diag.svg" },
-    { id: "trat", title: "Tratamientos", desc: "Quimioterapia, soporte paliativo.", icon: "/assets/icons/trat.svg" }
+    { id: "diag", title: "Diagnóstico", desc: "Imágenes, tumores y biopsias.", icon: "./src/assets/diagnostico.png" },
+    { id: "trat", title: "Tratamientos", desc: "Quimioterapia, soporte paliativo.", icon:"./src/assets/tratamientos.png" }
   ],
   team: [
-    { name: "Dra. Ana Pérez", role: "Oncología", photo: "/assets/team/ana.jpg", bio: "Especialista en oncología veterinaria con 10 años de experiencia." }
+    { name: "Dr. Federico Garcia", role: "Oncología", photo: "/assets/team/ana.jpg", bio: "Especialista en oncología veterinaria." }
   ],
   testimonials: [
-    { name: "Laura", text: "Excelente atención y cuidado de nuestros compañeros." }
+    { name: "Nahuel Acosta", text: "Excelente atención y cuidado de nuestros compañeros." }
   ],
   contact: {
     phone: "+598 9XX XXX XXX",
