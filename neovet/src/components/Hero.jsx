@@ -1,5 +1,4 @@
 import siteContent from "../data/siteContent";
-import sello from "../assets/sello8.png";
 
 export default function Hero() {
   return (
