@@ -32,6 +32,8 @@ export default function Hero() {
   <a
     href={siteContent.hero.ctaHref}
     className="hero__cta"
+    target="_blank"
+    rel="noopener noreferrer"
   >
     {siteContent.hero.ctaText}
   </a>

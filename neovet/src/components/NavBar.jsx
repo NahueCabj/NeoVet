@@ -59,9 +59,11 @@ export default function NavBar() {
 
         {/* Botón CTA Desktop */}
         <a
-          href="#contact"
+          href="https://wa.me/098540739"
           className="hidden md:inline-block text-white px-5 py-2 rounded-lg font-semibold hover:bg-[#C8D9F3] hover:text-[#134053] transition-all duration-300"
           style={{ backgroundColor: '#51B4A2' }}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Agendar consulta
         </a>
