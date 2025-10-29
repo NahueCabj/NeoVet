@@ -29,7 +29,7 @@ export default function Team() {
         {/* Imagen */}
         <div className="md:w-1/2 flex justify-center">
           <img
-            src="./src/assets/team-image.avif"
+            src="/images/team-image.avif"
             alt="Imagen de perro"
             className="w-full max-w-md rounded-2xl shadow-lg object-cover transition-transform duration-300 hover:scale-105"
           />

@@ -22,11 +22,11 @@ const siteContent = {
     image: "https://images.pexels.com/photos/7469229/pexels-photo-7469229.jpeg"
   },
   services: [
-    { id: "diag", title: "Consulta de especialidad en oncología.", desc: "Evaluamos a tu mascota con cuidado y precisión, para ofrecer un diagnóstico y tratamiento temprano y confiable.", icon: "./src/assets/diagnostico.png" },
-    { id: "cit", title: "Citologías.", desc: "Toma de muestras y lectura citológica para obtener diagnósticos confiables. ", icon:"./src/assets/citologias.png" },
-    { id: "ciru", title: "Cirugía oncológica especializada.", desc: "Intervenciones quirúrgicas planificadas y ejecutadas con precisión para la extirpación de tumores y manejo del riesgo quirúrgico.", icon:"./src/assets/cirugia.png" },
-    { id: "trat", title: "Tratamientos.", desc: "Planificación terapéutica personalizada para cada mascota. ", icon: "./src/assets/tratamientos.png" },
-    { id: "segui", title: "Seguimiento y Control", desc: "Monitoreo clínico y laboratoriales sistemáticos para optimizar la eficacia del tratamiento y la evolución del paciente.", icon: "./src/assets/seguimiento.png" },
+    { id: "diag", title: "Consulta de especialidad en oncología.", desc: "Evaluamos a tu mascota con cuidado y precisión, para ofrecer un diagnóstico y tratamiento temprano y confiable.", icon: "/images/diagnostico.png" },
+    { id: "cit", title: "Citologías.", desc: "Toma de muestras y lectura citológica para obtener diagnósticos confiables. ", icon:"/images/citologias.png" },
+    { id: "ciru", title: "Cirugía oncológica especializada.", desc: "Intervenciones quirúrgicas planificadas y ejecutadas con precisión para la extirpación de tumores y manejo del riesgo quirúrgico.", icon:"/images/cirugia.png" },
+    { id: "trat", title: "Tratamientos.", desc: "Planificación terapéutica personalizada para cada mascota. ", icon: "/images/tratamientos.png" },
+    { id: "segui", title: "Seguimiento y Control", desc: "Monitoreo clínico y laboratoriales sistemáticos para optimizar la eficacia del tratamiento y la evolución del paciente.", icon: "/images/seguimiento.png" },
   ],
   team: [
     
