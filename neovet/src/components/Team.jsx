@@ -5,7 +5,7 @@ export default function Team() {
   return (
     <section
       id="team"
-      className="min-h-screen py-20 bg-gray-50 pt-32 flex flex-col items-center">
+      className="min-h-auto py-20 bg-gray-50 pt-32 flex flex-col items-center">
       
 
       <div className="flex flex-col md:flex-row items-center justify-center gap-10 px-6 md:px-16">

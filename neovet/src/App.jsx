@@ -7,6 +7,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import "./styles/main.scss";
 
+
 export default function App() {
   return (
     <div className="font-sans">

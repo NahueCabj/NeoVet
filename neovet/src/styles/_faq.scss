@@ -1,0 +1,92 @@
+/* _faq.scss */
+.faq {
+    padding: 2rem 1rem;
+    color: #0f172a; // ajustar según paleta; aquí texto oscuro
+    .faq__inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  
+    .faq__title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+  
+    .faq__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 0.75rem;
+    }
+  
+    .faq__item {
+      background: rgba(255,255,255,0.04); // ligero fondo si estás sobre imagen/oscuro
+      border-radius: 0.75rem;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+  
+    .faq__trigger {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.25rem;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      text-align: left;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: inherit;
+  
+      &:focus {
+        outline: 3px solid rgba(81,180,162,0.15);
+        outline-offset: 3px;
+        border-radius: 0.5rem;
+      }
+    }
+  
+    .faq__question {
+      flex: 1;
+    }
+  
+    .faq__icon {
+      margin-left: 1rem;
+      font-size: 1.25rem;
+      width: 1.25rem;
+      text-align: center;
+    }
+  
+    .faq__panel {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 300ms ease, padding 300ms ease;
+      padding: 0 1.25rem;
+      background: transparent;
+  
+      &.is-open {
+        padding: 1rem 1.25rem 1.25rem;
+        max-height: 500px; // suficiente para respuestas largas; ajustar si hace falta
+      }
+  
+      .faq__answer {
+        margin: 0;
+        line-height: 1.6;
+        font-size: 0.97rem;
+        color: inherit;
+      }
+    }
+  
+    // responsive: en pantallas grandes separar en 2 columnas si querés
+    @media (min-width: 900px) {
+      .faq__list {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+    }
+  }
+  

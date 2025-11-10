@@ -76,34 +76,47 @@ export default function NavBar() {
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
+{/* Sidebar Mobile */}
+<div
+  className={`fixed top-0 right-0 h-full w-full bg-brand-violet text-white transform transition-transform duration-300 z-40 ${
+    isOpen ? "translate-x-0" : "translate-x-full"
+  }`}
+>
+  <div className="flex flex-col justify-center items-center h-full text-2xl relative">
+    {/* 🔹 Logo grande arriba */}
+    <div className="absolute top-10 flex justify-center w-full">
+      <img
+        src="/images/sello_blanco.png"
+        alt="NeoVet Logo"
+        className="h-36 w-auto object-contain"
+      />
+    </div>
 
-      {/* Sidebar Mobile */}
-      <div
-        className={`fixed top-0 right-0 h-full w-full bg-brand-violet text-white transform transition-transform duration-300 z-40 ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+    {/* 🔹 Menú con más margen superior */}
+    <div className="mt-64 flex flex-col items-center space-y-8">
+      {links.map((link) => (
+        <a
+          key={link.name}
+          href={link.href}
+          className="hover:text-brand-green transition-colors"
+          onClick={() => setIsOpen(false)}
+        >
+          {link.name}
+        </a>
+      ))}
+
+      <a
+        href="#contact"
+        className="block text-white px-6 py-3 rounded-lg font-semibold mt-4 hover:bg-[#C8D9F3] hover:text-[#134053] transition-all duration-300"
+        style={{ backgroundColor: "#06F1A2" }}
+        onClick={() => setIsOpen(false)}
       >
-        <div className="flex flex-col justify-center items-center h-full space-y-8 text-2xl">
-          {links.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="hover:text-brand-green transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              {link.name}
-            </a>
-          ))}
-          <a
-            href="#contact"
-            className="block text-white px-6 py-3 rounded-lg font-semibold mt-4 hover:bg-[#C8D9F3] hover:text-[#134053] transition-all duration-300"
-            style={{ backgroundColor: '#06F1A2' }}
-            onClick={() => setIsOpen(false)}
-          >
-            Agendar consulta
-          </a>
-        </div>
-      </div>
+        Agendar consulta
+      </a>
+    </div>
+  </div>
+</div>
+
     </nav>
   );
 }

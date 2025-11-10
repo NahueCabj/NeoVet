@@ -28,7 +28,15 @@ export default function Footer() {
 
       {/* Créditos */}
       <p className="text-sm text-brand-white/70">
-        Desarrollado por <span className="font-semibold">Nahuel Acosta</span>
+        Desarrollado por <span>
+        <a
+          href="https://www.linkedin.com/in/nahuel-acosta-developer/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-semibold hover:text-brand-green transition-colors">
+          Nahuel Acosta
+          </a>
+          </span>
       </p>
     </footer>
   );
